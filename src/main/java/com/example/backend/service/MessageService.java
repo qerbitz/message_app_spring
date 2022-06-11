@@ -18,7 +18,7 @@ public class MessageService {
     }
 
     public List<Message> getMessagesBySender(String recipient){
-        return messageRepository.getAllByRecipient(recipient);
+        return messageRepository.getAllByRecipientOrderByIdDesc(recipient);
     }
 
     public void saveMessage(Message message){
